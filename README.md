@@ -149,7 +149,7 @@ The script will now run automatically on your chosen interval.
 
 ## Todo
 
-- Implement Signal/Telegram/Whatsapp webhooks for notifications - c'mon I've made this on 40min 🙂
+- Implement Signal/Telegram/Whatsapp webhooks for notifications - c'mon I've made this in 40min 🙂
 
 ---
 
