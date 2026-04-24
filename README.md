@@ -42,6 +42,8 @@ my-coaching-alerts-x7k2
 
 Set this as the value of `NTFY_TOPIC` in the script.
 
+> I recommend installed the progressive web app thru Google Chrome.
+
 > Subscribtion options:
 
 ### Subscribe via Browser
