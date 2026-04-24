@@ -34,7 +34,7 @@ A time-based trigger runs the script every 15–30 minutes. For each athlete in 
 
 ntfy.sh works on a pub/sub model with no account required. You publish to a topic and subscribe to it on any device.
 
-**Pick a topic name** that is hard to guess (it acts as a shared secret since topics are public by default):
+**Pick a topic name** that is hard to guess (it acts as a shared secret since topics are public by default), eg:
 
 ```
 my-coaching-alerts-x7k2
@@ -51,10 +51,11 @@ Set this as the value of `NTFY_TOPIC` in the script.
 3. Allow browser notifications when prompted
 4. Leave the tab open, or pin it — notifications will arrive even if the tab is in the background
 
-### Subscribe via Browser extension
+### Subscribe via Unofficial NTFY Browser extension
 
 > You've already done some work on previous steps
 
+- [ntfy-browser](https://github.com/johman10/ntfy-browser)
 - [Google Chrome](https://chromewebstore.google.com/detail/ntfy-chrome-extension/cdfpbcjnffgfghoglkbhlpmhigokobam?hl=en)
 - [Mozilla Firefox](https://addons.mozilla.org/en-US/firefox/addon/ntfy/)
 
@@ -141,6 +142,12 @@ The script will now run automatically on your chosen interval.
 - **GAS execution limit:** Google Apps Script has a 6-minute hard timeout per execution. The script handles one athlete per loop iteration sequentially — if your roster grows beyond ~30 athletes, consider optimizing with `UrlFetchApp.fetchAll()`.
 - **Strava-sourced activities:** Intervals.icu may not expose full metadata for activities synced via Strava through its API. This script only checks for the presence of a new activity ID, so detection still works regardless of the sync source.
 - **ntfy.sh topic privacy:** Default topics on ntfy.sh are public. Use a non-guessable topic name.
+
+---
+
+## Todo
+
+- Implement Signal/Telegram/Whatsapp webhooks for notifications - c'mon I've made this on 40min 🙂
 
 ---
 
